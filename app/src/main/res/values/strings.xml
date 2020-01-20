@@ -1,22 +1,7 @@
 <resources>
     <string name="app_name">Memory Game</string>
-    <string name="score_text">1,000,000</string>
+    <string name="score_text">00</string>
     <string name="score_label">Score:</string>
-    <string name="Box1">Box 1</string>
-    <string name="Box_2">Box 2</string>
-    <string name="Box_3">Box 3</string>
-    <string name="Box_4">Box 4</string>
-    <string name="square_5">Box 5</string>
-    <string name="box_5">Box 5</string>
-    <string name="box_6">Box 6</string>
-    <string name="box_7">Box 7</string>
-    <string name="box_8">Box 8</string>
-    <string name="box_9">Box 9</string>
-    <string name="box_10">Box 10</string>
-    <string name="box_11">Box 11</string>
-    <string name="box_12">Box 12</string>
-    <string name="box_13">Box 13</string>
-    <string name="box_14">Box 14</string>
-    <string name="box_15">Box 15</string>
-    <string name="box_16">Box 16</string>
+    <string name="game_message">Match all 20 boxes to their matching color to win!\n\nYou need 80 points to win.</string>
+    <string name="empty_Box" />
 </resources>
