@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Memory Game</string>
+    <string name="score_text">1,000,000</string>
+    <string name="score_label">Score:</string>
+    <string name="Box1">Box 1</string>
+    <string name="Box_2">Box 2</string>
+    <string name="Box_3">Box 3</string>
+    <string name="Box_4">Box 4</string>
+    <string name="square_5">Box 5</string>
+    <string name="box_5">Box 5</string>
+    <string name="box_6">Box 6</string>
+</resources>
