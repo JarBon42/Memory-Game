@@ -2,6 +2,9 @@
     <string name="app_name">Memory Game</string>
     <string name="score_text">00</string>
     <string name="score_label">Score:</string>
-    <string name="game_message">Match all 20 boxes to their matching color to win!\n\nYou need 80 points to win.</string>
+    <string name="game_message">Match all 16 boxes to their matching color to win!\n\nYou need 40 points to win.</string>
+    <string name="Right_message">Good job! Those matched!!!\n\nSelect a box to continue.</string>
+    <string name="Wrong_message">Too bad, those didn\'t match…\n\nSelect a box to continue.</string>
+    <string name="Win_message">Congratulations Champ! You won!!!\n\nThanks for playing.</string>
     <string name="empty_Box" />
 </resources>

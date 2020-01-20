@@ -4,16 +4,15 @@
     <color name="colorPrimaryDark">#00574B</color>
     <color name="colorAccent">#D81B60</color>
 
-    <color name="pink">#f978d3</color>
-    <color name="yellow">#f0ff00</color>
-    <color name="purple">#7348c9</color>
-    <color name="blue">#5d85d8</color>
-    <color name="teal">#29bfa4</color>
-    <color name="red">#ff3300</color>
-    <color name="brown">#8b4a14</color>
-    <color name="green">#818b2d</color>
+    <drawable name="pink">#f978d3</drawable>
+    <drawable name="yellow">#f0ff00</drawable>
+    <drawable name="purple">#7348c9</drawable>
+    <drawable name="blue">#5d85d8</drawable>
+    <drawable name="teal">#29bfa4</drawable>
+    <drawable name="red">#ff3300</drawable>
+    <drawable name="brown">#8b4a14</drawable>
+    <drawable name="green">#818b2d</drawable>
 
     <color name="white">#ffffff</color>
-    <color name="background">#2E3032</color>
 
 </resources>

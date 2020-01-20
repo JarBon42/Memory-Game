@@ -2,14 +2,13 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/background_constrait"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#2E3032"
     tools:context=".MainActivity">
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/Message_text"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="23dp"
@@ -22,11 +21,11 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Score_text"
+        app:layout_constraintTop_toBottomOf="@+id/current_score_text"
         app:layout_constraintVertical_bias="0.0" />
 
     <TextView
-        android:id="@+id/Score_text"
+        android:id="@+id/current_score_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="152dp"
@@ -46,7 +45,7 @@
         android:textColor="?attr/colorBackgroundFloating"
         android:textSize="36sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/Score_text"
+        app:layout_constraintEnd_toStartOf="@+id/current_score_text"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/box_14" />
