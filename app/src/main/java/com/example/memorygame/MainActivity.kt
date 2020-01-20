@@ -6,12 +6,16 @@ import android.view.View
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_main.*
+import java.util.*
+import kotlin.collections.HashMap
+import kotlin.concurrent.timerTask
 
 //Declaring the guess variables, so they can for color-matching logic
 var guess1: View? = null
 var guess2: View? = null
 
-var colorMap : HashMap<TextView, Int> ?= null
+//Declaring the HashMap as a HashMap so it can hold values
+var colorMap : HashMap<TextView, Int> = HashMap<TextView, Int>()
 
 
 var score: Int = 0
@@ -104,16 +108,21 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
+
+
     private fun correctCheck(){  //Checks if the current guess are right or not
         if (colorMap?.get(guess1) !=  colorMap?.get(guess2)) {
             Message_text.setText(R.string.Wrong_message)
 
-            hideColors()
+            Timer().schedule(timerTask {
+                hideColors()  //Timer is used to delay hiding the results after a short moment
+            }, 500)
+
         } else {
             score += 5  //Increases score by 5 points
             current_score_text.text = score.toString()
 
-            if (score == 40) {  //Gives the victory message
+            if (score >= 40) {  //Gives the victory message
                 Message_text.setText(R.string.Win_message)
             } else {  //Gives normal correct answer message
                 Message_text.setText(R.string.Right_message)
