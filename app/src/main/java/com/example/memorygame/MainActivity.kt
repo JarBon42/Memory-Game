@@ -15,7 +15,7 @@ var guess1: View? = null
 var guess2: View? = null
 
 //Declaring the HashMap as a HashMap so it can hold values
-var colorMap : HashMap<TextView, Int> = HashMap<TextView, Int>()
+var colorMap: HashMap<TextView, Int> = HashMap<TextView, Int>()
 
 
 var score: Int = 0
@@ -29,10 +29,28 @@ class MainActivity : AppCompatActivity() {
 
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        setlisteners()
+        setlisteners()  // Sets up the boxes as buttons
+
+        //Adds boxes to colorMap
+        colorMap.put(box_1, R.color.red)
+        colorMap.put(box_2, R.color.green)
+        colorMap.put(box_3, R.color.brown)
+        colorMap.put(box_4, R.color.teal)
+        colorMap.put(box_5, R.color.blue)
+        colorMap.put(box_6, R.color.purple)
+        colorMap.put(box_7, R.color.pink)
+        colorMap.put(box_8, R.color.yellow)
+        colorMap.put(box_9, R.color.red)
+        colorMap.put(box_10, R.color.green)
+        colorMap.put(box_11, R.color.brown)
+        colorMap.put(box_12, R.color.teal)
+        colorMap.put(box_13, R.color.blue)
+        colorMap.put(box_14, R.color.purple)
+        colorMap.put(box_15, R.color.pink)
+        colorMap.put(box_16, R.color.yellow)
     }
 
-    private fun setlisteners() {  // Sets up the boxes as buttons
+    private fun setlisteners() {
         val boxes: List<View> =
             listOf( //Records clickables
                 box_1, box_2, box_3, box_4,
@@ -46,6 +64,21 @@ class MainActivity : AppCompatActivity() {
             item.setOnClickListener {
                 revealColor(it)
             }
+        }
+    }
+
+    private fun setSilencer() {
+        val boxes: List<View> =
+            listOf( //Records clickables
+                box_1, box_2, box_3, box_4,
+                box_5, box_6, box_7, box_8,
+                box_9, box_10, box_11, box_12,
+                box_13, box_14, box_15, box_16
+
+            )
+
+        for (item in boxes) {
+            item.isClickable = false
         }
     }
 
@@ -68,22 +101,6 @@ class MainActivity : AppCompatActivity() {
             R.id.box_15 -> box_15.setBackgroundResource(R.color.pink)
             R.id.box_16 -> box_16.setBackgroundResource(R.color.yellow)
         }
-        colorMap?.put(box_1,R.color.red)
-        colorMap?.put(box_2,R.color.green)
-        colorMap?.put(box_3,R.color.brown)
-        colorMap?.put(box_4,R.color.teal)
-        colorMap?.put(box_5,R.color.blue)
-        colorMap?.put(box_6,R.color.purple)
-        colorMap?.put(box_7,R.color.pink)
-        colorMap?.put(box_8,R.color.yellow)
-        colorMap?.put(box_9,R.color.red)
-        colorMap?.put(box_10,R.color.green)
-        colorMap?.put(box_11,R.color.brown)
-        colorMap?.put(box_12,R.color.teal)
-        colorMap?.put(box_13,R.color.blue)
-        colorMap?.put(box_14,R.color.purple)
-        colorMap?.put(box_15,R.color.pink)
-        colorMap?.put(box_16,R.color.yellow)
 
         takeAguess(view)  // Collects current guess
     }
@@ -104,15 +121,16 @@ class MainActivity : AppCompatActivity() {
         } else {
             guess2 = playerChoice
 
+            //setSilencer()
             correctCheck()
         }
     }
 
 
-
-    private fun correctCheck(){  //Checks if the current guess are right or not
-        if (colorMap?.get(guess1) !=  colorMap?.get(guess2)) {
+    private fun correctCheck() {  //Checks if the current guess are right or not
+        if (colorMap.get(guess1) != colorMap.get(guess2)) {
             Message_text.setText(R.string.Wrong_message)
+
 
             Timer().schedule(timerTask {
                 hideColors()  //Timer is used to delay hiding the results after a short moment
@@ -127,6 +145,9 @@ class MainActivity : AppCompatActivity() {
             } else {  //Gives normal correct answer message
                 Message_text.setText(R.string.Right_message)
             }
+
+            guess1?.isClickable = false
+            guess2?.isClickable = false
 
             guess1 = null
             guess2 = null

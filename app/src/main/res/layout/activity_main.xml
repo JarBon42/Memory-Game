@@ -27,7 +27,6 @@
             android:layout_height="80dp"
             android:layout_margin="4dp"
             android:background="@color/white"
-            android:keyboardNavigationCluster="false"
             android:text="@string/empty_Box"
             android:textAlignment="center"
             android:textIsSelectable="false" />
