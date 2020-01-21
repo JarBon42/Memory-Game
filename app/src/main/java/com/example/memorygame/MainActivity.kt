@@ -1,11 +1,13 @@
 package com.example.memorygame
 
 import android.annotation.SuppressLint
+import android.graphics.Color
 import android.os.Bundle
 import android.view.View
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_main.*
+import java.lang.Math.random
 import java.util.*
 import kotlin.collections.HashMap
 import kotlin.concurrent.timerTask
@@ -20,7 +22,6 @@ var colorMap: HashMap<TextView, Int> = HashMap<TextView, Int>()
 
 var score: Int = 0
 
-
 class MainActivity : AppCompatActivity() {
     @SuppressLint("ResourceAsColor") //Required to get colors
 
@@ -32,22 +33,24 @@ class MainActivity : AppCompatActivity() {
         setlisteners()  // Sets up the boxes as buttons
 
         //Adds boxes to colorMap
-        colorMap.put(box_1, R.color.red)
-        colorMap.put(box_2, R.color.green)
-        colorMap.put(box_3, R.color.brown)
-        colorMap.put(box_4, R.color.teal)
-        colorMap.put(box_5, R.color.blue)
-        colorMap.put(box_6, R.color.purple)
-        colorMap.put(box_7, R.color.pink)
-        colorMap.put(box_8, R.color.yellow)
-        colorMap.put(box_9, R.color.red)
-        colorMap.put(box_10, R.color.green)
-        colorMap.put(box_11, R.color.brown)
-        colorMap.put(box_12, R.color.teal)
-        colorMap.put(box_13, R.color.blue)
-        colorMap.put(box_14, R.color.purple)
-        colorMap.put(box_15, R.color.pink)
-        colorMap.put(box_16, R.color.yellow)
+        colorMap.run {
+            put(box_1, R.color.red)
+            put(box_2, R.color.green)
+            put(box_3, R.color.brown)
+            put(box_4, R.color.teal)
+            put(box_5, R.color.blue)
+            put(box_6, R.color.purple)
+            put(box_7, R.color.pink)
+            put(box_8, R.color.yellow)
+            put(box_9, R.color.red)
+            put(box_10, R.color.green)
+            put(box_11, R.color.brown)
+            put(box_12, R.color.teal)
+            put(box_13, R.color.blue)
+            put(box_14, R.color.purple)
+            put(box_15, R.color.pink)
+            put(box_16, R.color.yellow)
+        }
     }
 
     private fun setlisteners() {
@@ -67,6 +70,26 @@ class MainActivity : AppCompatActivity() {
             }
         }
     }
+
+    /*
+    fun randomColor(Squares: List<View>) {
+        val colorList : List<Int>  =
+            listOf( //Colors to be randomized with
+                R.color.red, R.color.green,
+                R.color.brown, R.color.teal,
+                R.color.blue, R.color.purple,
+                R.color.pink, R.color.yellow
+            )
+
+        for (color in colorList) {
+            var ran1 = random().toInt()
+            var ran2 = random().toInt()
+
+            Squares.get(ran1) = Squares[ran1].setBackgroundResource()
+
+        }
+    }
+    */
 
     private fun setSilencer() {
         val boxes: List<View> =
