@@ -63,6 +63,7 @@ class MainActivity : AppCompatActivity() {
         for (item in boxes) {
             item.setOnClickListener {
                 revealColor(it)
+
             }
         }
     }
@@ -79,6 +80,12 @@ class MainActivity : AppCompatActivity() {
 
         for (item in boxes) {
             item.isClickable = false
+
+
+            Timer().schedule(timerTask {
+                //Timer is re-enable clickability on the app
+                item.isClickable = true
+            }, 2000)
         }
     }
 
@@ -122,6 +129,7 @@ class MainActivity : AppCompatActivity() {
             guess2 = playerChoice
 
             //setSilencer()
+
             correctCheck()
         }
     }

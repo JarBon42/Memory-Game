@@ -14,5 +14,6 @@
     <color name="green">#818b2d</color>
 
     <color name="white">#ffffff</color>
+    <color name="buffering"></color>
 
 </resources>
