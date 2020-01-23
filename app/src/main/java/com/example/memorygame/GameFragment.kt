@@ -134,7 +134,7 @@ class GameFragment : Fragment() {
 
     private fun revealColor(view: TextView) {  //Sets the boxes to their colors
 
-        var color = colorMap[view]
+        var color = colorMap[view]  // Set by view IDs
         view.setBackgroundResource(color!!)
 
      /*
