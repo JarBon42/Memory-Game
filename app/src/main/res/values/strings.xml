@@ -7,4 +7,7 @@
     <string name="Wrong_message">Too bad, those didn\'t match…\n\nSelect a box to continue.</string>
     <string name="Win_message">Congratulations Champ! You won!!!\n\nThanks for playing.</string>
     <string name="empty_Box" />
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
